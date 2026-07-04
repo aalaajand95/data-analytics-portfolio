@@ -2,6 +2,7 @@
 
 Analysis of 1,000 orders from a fast-food stall (2022–2023) answering the questions a real owner would ask: **what sells, when it sells, how customers pay, and how the business is trending.** The project takes a messy public dataset from raw CSV all the way to a cleaned dataset, a documented analysis, an interactive dashboard, and a written business report.
 
+> **Tableau workbook:** [`tableau/Restaurant_Sales_Dashboard.twbx`](tableau/Restaurant_Sales_Dashboard.twbx) — download and open in Tableau Desktop / Public
 > **Interactive dashboard:** [`dashboard/Balaji_Dashboard.html`](dashboard/Balaji_Dashboard.html) — download and open in a browser
 > **Dataset:** [Balaji Fast Food Sales — Kaggle](https://www.kaggle.com/) · 1,000 orders
 
@@ -18,6 +19,7 @@ Analysis of 1,000 orders from a fast-food stall (2022–2023) answering the ques
 
 - **Python** (pandas, matplotlib) — data cleaning and exploratory analysis
 - **Jupyter Notebook** — documented, reproducible analysis
+- **Tableau** — interactive dashboard (packaged `.twbx` workbook)
 - **Interactive HTML dashboard** — self-contained, opens in any browser
 - **Excel/CSV** — cleaned data output
 
@@ -62,8 +64,10 @@ balaji-fast-food-sales-analysis/
 ├── data/
 │   ├── Balaji Fast Food Sales.csv        # raw data
 │   └── Balaji_cleaned.csv                # cleaned, analysis-ready
+├── tableau/
+│   └── Restaurant_Sales_Dashboard.twbx   # Tableau workbook (source)
 ├── dashboard/
-│   └── Balaji_Dashboard.html             # interactive dashboard
+│   └── Balaji_Dashboard.html             # interactive dashboard (HTML export)
 ├── report/
 │   ├── Balaji_Sales_Report.pdf           # written business report
 │   └── Balaji_Sales_Report.docx          # editable source of the report
