@@ -2,8 +2,9 @@
 
 Analysis of 1,000 orders from a fast-food stall (2022–2023) answering the questions a real owner would ask: **what sells, when it sells, how customers pay, and how the business is trending.** The project takes a messy public dataset from raw CSV all the way to a cleaned dataset, a documented analysis, an interactive dashboard, and a written business report.
 
+> **Live dashboard:** [View on Tableau Public](https://public.tableau.com/app/profile/aalaa.jandali/viz/Restaurant_Sales_Dashboard_v2/RestaurantSalesDashboard) — interactive, no download needed
 > **Tableau workbook:** [`tableau/Restaurant_Sales_Dashboard.twbx`](tableau/Restaurant_Sales_Dashboard.twbx) — download and open in Tableau Desktop / Public
-> **Interactive dashboard:** [`dashboard/Balaji_Dashboard.html`](dashboard/Balaji_Dashboard.html) — download and open in a browser
+> **HTML dashboard:** [`dashboard/Balaji_Dashboard.html`](dashboard/Balaji_Dashboard.html) — download and open in a browser
 > **Dataset:** [Balaji Fast Food Sales — Kaggle](https://www.kaggle.com/) · 1,000 orders
 
 ---
