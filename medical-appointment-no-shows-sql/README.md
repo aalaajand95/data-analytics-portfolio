@@ -51,7 +51,7 @@ The entire pipeline — loading, quality checks, cleaning, transformation, and a
 | 4. Core analysis: who no-shows and why | [`sql/04_analysis_no_show_drivers.sql`](sql/04_analysis_no_show_drivers.sql) | ✅ |
 | 5. Advanced: patient history with window functions | [`sql/05_patient_history_window_functions.sql`](sql/05_patient_history_window_functions.sql) | ✅ |
 | 6. Findings write-up with recommendations | [`report/findings.md`](report/findings.md) | ✅ |
-| 7. (Optional) Tableau dashboard of key metrics | `tableau/` | ⬜ |
+| 7. Tableau dashboard: extract + build guide | [`tableau/`](tableau/) | 📋 guide ready — build in Tableau |
 
 ## How to run
 
@@ -74,7 +74,12 @@ sqlite3 appointments.db < sql/04_analysis_no_show_drivers.sql
 
 # Step 5 — patient-history analysis with window functions
 sqlite3 appointments.db < sql/05_patient_history_window_functions.sql
+
+# Step 6b — export the clean extract for Tableau
+sqlite3 appointments.db < sql/06_export_for_tableau.sql
 ```
+
+To build the dashboard from that extract, follow [`tableau/README.md`](tableau/README.md).
 
 The generated `appointments.db` is disposable and not committed — the SQL scripts are the source of truth.
 
