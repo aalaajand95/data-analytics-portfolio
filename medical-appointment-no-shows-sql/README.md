@@ -45,7 +45,7 @@ The entire pipeline — loading, quality checks, cleaning, transformation, and a
 |---|---|---|
 | 1. Load raw data into SQLite staging table | [`sql/01_load_raw_data.sql`](sql/01_load_raw_data.sql) | ✅ |
 | 2. Profile data quality in SQL | [`sql/02_data_profiling.sql`](sql/02_data_profiling.sql) | ✅ |
-| 3. Clean & transform into an analysis table | [`sql/03_clean_transform.sql`](sql/03_clean_transform.sql) | ⬜ |
+| 3. Clean & transform into an analysis table | [`sql/03_clean_transform.sql`](sql/03_clean_transform.sql) | ✅ |
 | 4. Core analysis: who no-shows and why | [`sql/04_analysis_no_show_drivers.sql`](sql/04_analysis_no_show_drivers.sql) | ⬜ |
 | 5. Advanced: patient history with window functions | [`sql/05_patient_history_window_functions.sql`](sql/05_patient_history_window_functions.sql) | ⬜ |
 | 6. Findings write-up with recommendations | `report/findings.md` | ⬜ |
@@ -63,6 +63,9 @@ sqlite3 appointments.db < sql/01_load_raw_data.sql
 
 # Step 2 — run the profiling queries
 sqlite3 appointments.db < sql/02_data_profiling.sql
+
+# Step 3 — build the clean `appointments` analysis table
+sqlite3 appointments.db < sql/03_clean_transform.sql
 ```
 
 The generated `appointments.db` is disposable and not committed — the SQL scripts are the source of truth.
