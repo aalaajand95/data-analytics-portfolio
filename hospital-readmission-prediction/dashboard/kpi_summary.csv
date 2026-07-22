@@ -1,0 +1,2 @@
+total_encounters,test_patients,baseline_readmit_rate_pct,model_auc,high_tier_share_pct,high_tier_readmit_rate_pct,recall_at_high_tier_pct,precision_at_high_tier_pct,lift_top_decile
+69987,17497,8.98,0.642,20.0,16.1,35.9,16.1,1.99
