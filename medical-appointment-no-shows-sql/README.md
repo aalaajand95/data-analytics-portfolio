@@ -1,12 +1,14 @@
 # Medical Appointment No-Shows — SQL Analysis
 
-**Status: 🚧 In progress**
+**Status: ✅ Analysis complete** — full SQL pipeline + written findings report. (Optional Tableau dashboard still to come.)
 
 A SQL-first portfolio project analyzing ~110K medical appointments from public clinics in Vitória, Brazil (April–June 2016), to answer one business question:
 
 > **Why do ~20% of patients miss their scheduled medical appointments, and what factors predict a no-show?**
 
 Missed appointments waste clinical capacity and delay care. If we can identify which appointments are at risk, clinics can target reminders, adjust overbooking, and reduce wasted slots.
+
+**📄 Read the full write-up: [`report/findings.md`](report/findings.md).** Headline results: booking lead time is the strongest driver (4.6% no-show same-day vs 33% at 31+ days); a patient's prior no-show history raises risk from 19% to 38%; and the apparent "SMS reminders backfire" result reverses once lead time is controlled for — reminders actually help.
 
 **Dataset:** [Medical Appointment No Shows (Kaggle)](https://www.kaggle.com/datasets/joniarroba/noshowappointments) — 110,527 rows, 14 columns, one row per appointment.
 
@@ -48,7 +50,7 @@ The entire pipeline — loading, quality checks, cleaning, transformation, and a
 | 3. Clean & transform into an analysis table | [`sql/03_clean_transform.sql`](sql/03_clean_transform.sql) | ✅ |
 | 4. Core analysis: who no-shows and why | [`sql/04_analysis_no_show_drivers.sql`](sql/04_analysis_no_show_drivers.sql) | ✅ |
 | 5. Advanced: patient history with window functions | [`sql/05_patient_history_window_functions.sql`](sql/05_patient_history_window_functions.sql) | ✅ |
-| 6. Findings write-up with recommendations | `report/findings.md` | ⬜ |
+| 6. Findings write-up with recommendations | [`report/findings.md`](report/findings.md) | ✅ |
 | 7. (Optional) Tableau dashboard of key metrics | `tableau/` | ⬜ |
 
 ## How to run
