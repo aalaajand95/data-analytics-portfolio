@@ -1,0 +1,18 @@
+-- ============================================================
+-- Step 5: Patient-history analysis with window functions (TO DO)
+-- 62,299 unique patients across 110K appointments -> we can study
+-- behaviour over time, the most advanced SQL in this project.
+-- ============================================================
+-- Q1. Visit frequency: distribution of appointments per patient
+--     (how many one-timers vs frequent visitors?).
+-- Q2. Does history predict the future? For each appointment, compute
+--     the patient's PRIOR no-show count using a window frame:
+--       SUM(no_show) OVER (
+--         PARTITION BY patient_id
+--         ORDER BY scheduled_at
+--         ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING)
+--     Then compare no-show rates for patients with 0, 1, 2+ prior misses.
+-- Q3. Streaks: patients with the longest consecutive no-show runs
+--     (gaps-and-islands with ROW_NUMBER() difference trick).
+-- Q4. First vs. repeat appointments: are new patients more or less
+--     reliable than returning ones? (ROW_NUMBER() = 1 vs > 1).

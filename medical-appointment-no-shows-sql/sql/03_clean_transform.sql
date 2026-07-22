@@ -1,0 +1,25 @@
+-- ============================================================
+-- Step 3: Clean & transform (TO DO — next working session)
+-- Build the analysis table `appointments` from raw_appointments.
+-- ============================================================
+-- Cleaning rules decided from Step 2 profiling:
+--   1. Drop the row with Age = -1 (impossible value).
+--   2. Drop the 5 rows where ScheduledDay > AppointmentDay.
+--   3. Rename misspelled columns: Hipertension -> hypertension,
+--      Handcap -> disability_count; No_show -> no_show flag.
+--   4. Convert the confusing target: no_show = 1 when 'Yes' (missed),
+--      0 when 'No' (attended).
+--   5. Cast types: ages to INTEGER, flags to INTEGER, dates to ISO dates.
+--
+-- Derived columns to add:
+--   * lead_time_days   = julianday(AppointmentDay) - julianday(date(ScheduledDay))
+--   * appointment_dow  = day of week of the appointment (strftime('%w', ...))
+--   * age_band         = CASE buckets: 0-11, 12-17, 18-34, 35-49, 50-64, 65+
+--   * has_disability   = disability_count > 0
+--
+-- Skeleton:
+-- DROP TABLE IF EXISTS appointments;
+-- CREATE TABLE appointments AS
+-- SELECT ...
+-- FROM raw_appointments
+-- WHERE <cleaning filters>;

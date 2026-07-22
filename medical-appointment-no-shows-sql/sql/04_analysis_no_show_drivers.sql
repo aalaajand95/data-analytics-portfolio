@@ -1,0 +1,22 @@
+-- ============================================================
+-- Step 4: Core analysis (TO DO — after Step 3)
+-- Each question becomes one query with a short comment on the
+-- finding, quoted later in report/findings.md.
+-- ============================================================
+-- Q1. Overall no-show rate (baseline ~20.2%).
+-- Q2. No-show rate by gender — conditional aggregation:
+--     ROUND(100.0 * AVG(no_show), 1)
+-- Q3. No-show rate by age band — is attendance better for older patients?
+-- Q4. No-show rate by lead-time bucket (same day / 1-3 / 4-7 / 8-14 / 15-30 / 30+).
+--     Expected headline: same-day bookings almost never no-show;
+--     long lead times are the highest risk.
+-- Q5. The SMS paradox: no-show rate by SMS_received overall, THEN
+--     re-segmented to advance bookings only (lead_time_days > 0) to
+--     remove the same-day confounder. Does SMS help once compared
+--     like-for-like?
+-- Q6. Scholarship (welfare) and chronic conditions vs attendance.
+-- Q7. Day of week: which weekday has the worst attendance?
+--     (Note: only ~6 weeks of data, and few Saturday appointments.)
+-- Q8. Top/bottom 10 neighbourhoods by no-show rate (with a minimum
+--     appointment-count filter so small clinics don't dominate) —
+--     CTE + window RANK().
