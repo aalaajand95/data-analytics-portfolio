@@ -1,5 +1,7 @@
 # Step 7 — Build the Tableau Dashboard
 
+**▶️ Live dashboard:** <https://public.tableau.com/app/profile/aalaa.jandali/viz/Medical_No_Show_Dashboard/MedicalAppointmentNoShows>
+
 This guide walks you through building a **No-Show Analysis** dashboard in
 **Tableau Public** (the free version) from the extract this project produces.
 

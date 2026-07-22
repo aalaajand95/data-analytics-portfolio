@@ -1,12 +1,14 @@
 # Medical Appointment No-Shows — SQL Analysis
 
-**Status: ✅ Analysis complete** — full SQL pipeline + written findings report. (Optional Tableau dashboard still to come.)
+**Status: ✅ Complete** — full SQL pipeline, written findings report, and a live interactive dashboard.
 
 A SQL-first portfolio project analyzing ~110K medical appointments from public clinics in Vitória, Brazil (April–June 2016), to answer one business question:
 
 > **Why do ~20% of patients miss their scheduled medical appointments, and what factors predict a no-show?**
 
 Missed appointments waste clinical capacity and delay care. If we can identify which appointments are at risk, clinics can target reminders, adjust overbooking, and reduce wasted slots.
+
+**📊 Live dashboard:** [Medical Appointment No-Shows on Tableau Public](https://public.tableau.com/app/profile/aalaa.jandali/viz/Medical_No_Show_Dashboard/MedicalAppointmentNoShows)
 
 **📄 Read the full write-up: [`report/findings.md`](report/findings.md).** Headline results: booking lead time is the strongest driver (4.6% no-show same-day vs 33% at 31+ days); a patient's prior no-show history raises risk from 19% to 38%; and the apparent "SMS reminders backfire" result reverses once lead time is controlled for — reminders actually help.
 
@@ -51,7 +53,7 @@ The entire pipeline — loading, quality checks, cleaning, transformation, and a
 | 4. Core analysis: who no-shows and why | [`sql/04_analysis_no_show_drivers.sql`](sql/04_analysis_no_show_drivers.sql) | ✅ |
 | 5. Advanced: patient history with window functions | [`sql/05_patient_history_window_functions.sql`](sql/05_patient_history_window_functions.sql) | ✅ |
 | 6. Findings write-up with recommendations | [`report/findings.md`](report/findings.md) | ✅ |
-| 7. Tableau dashboard: extract + build guide | [`tableau/`](tableau/) | 📋 guide ready — build in Tableau |
+| 7. [Tableau dashboard](https://public.tableau.com/app/profile/aalaa.jandali/viz/Medical_No_Show_Dashboard/MedicalAppointmentNoShows) (extract + build guide) | [`tableau/`](tableau/) | ✅ |
 
 ## How to run
 
