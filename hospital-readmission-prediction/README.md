@@ -87,7 +87,7 @@ hospital-readmission-prediction/
 │              04_charts.py                    — ROC, decile, gains, odds-ratio charts
 │              05_vif_and_dashboard_export.py  — VIF check + Power BI export tables
 ├── charts/    generated PNGs + supporting CSVs
-├── dashboard/ Power BI file, import-ready tables, and a build guide
+├── dashboard/ Power BI file and import-ready tables
 ├── report/    findings.md                   — written findings & recommendations
 └── data/      raw diabetic_data.csv + IDS_mapping.csv, and the cleaned analytic_table.csv
 ```
