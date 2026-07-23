@@ -88,8 +88,12 @@ hospital-readmission-prediction/
 │              05_vif_and_dashboard_export.py  — VIF check + Power BI export tables
 ├── charts/    generated PNGs + supporting CSVs
 ├── dashboard/ Power BI file, import-ready tables, and a build guide
+├── report/    findings.md                   — written findings & recommendations
 └── data/      raw diabetic_data.csv + IDS_mapping.csv, and the cleaned analytic_table.csv
 ```
+
+**Full write-up:** [`report/findings.md`](report/findings.md) — the finding-led narrative,
+data-quality decisions, metrics, and operational recommendations.
 
 ## Reproduce it
 
